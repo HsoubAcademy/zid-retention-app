@@ -1,0 +1,22 @@
+extends page.pug 
+block append head
+    title Abandoned Carts
+block content 
+  table.w-full.text-md.bg-white.shadow-md.rounded.mb-6.max-w-6xl.min-w-0.mx-auto.px-6
+    thead
+      tr.border-b
+        th.text-left.p-1.px-4 Customer Name
+        th.text-left.p-1.px-4 Customer Email
+        th.text-left.p-1.px-4 Customer Mobile
+        th.text-left.p-1.px-4 Products In Cart
+        th.text-left.p-1.px-4 Cart Total(SAR)
+        th.text-left.p-1.px-4 Phase
+    tbody 
+    each element in renderedData 
+      tr.border-b.bg-gray-100(class='hover:bg-orange-100')
+        td.p-3.px-5=element.customer_name
+        td.p-3.px-5=element.customer_email
+        td.p-3.px-5=element.customer_mobile
+        td.p-3.px-5=element.products_count
+        td.p-3.px-5=element.cart_total
+        td.p-3.px-5=element.phase

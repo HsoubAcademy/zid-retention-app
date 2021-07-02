@@ -1,0 +1,12 @@
+extends page.pug 
+block append head
+  title Loyalty
+block content 
+  .wrapper.px-2.w-full
+    p.text3xl.items-center.justify-center Send a coupon code to all abandoned carts
+    form.max-w-sm.bg-gray-100.px-3.py-5.rounded.shadow-lg.my-10.m-auto(action='/loyalty' method='POST')
+      .flex.flex-col.space-y-3
+        .flex.items-center.bg-white.border.border-gray-100.rounded.px-2
+          input.w-full.py-2.px-1.placeholder-indigo-400.outline-none.placeholder-opacity-50(type='text' placeholder='Enter Coupon Code' autocomplete='off')
+        button.text-white.bg-indigo-500.px-4.py-2.rounded(type='submit')
+          | Send Coupon

@@ -1,0 +1,8 @@
+{
+    "ext": "js",
+    "exec": "node index.js",
+    "env": {
+      "NODE_CONFIG_DIR": "./config"
+    }
+  }
+  
